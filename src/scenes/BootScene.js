@@ -150,14 +150,14 @@ export default class BootScene extends Phaser.Scene {
 
         // ============== LEVEL 3 ENEMIES (Lava/Hell) ==============
 
-        // Bat - small (48x16, 3 frames of 16x16)
-        this.load.spritesheet('l3-enemy-small', 'assets/sprites/level3/bat.png', {
-            frameWidth: 16, frameHeight: 16
+        // Fire Haunt - small (560x128, 5 frames of 112x128)
+        this.load.spritesheet('l3-enemy-small', 'assets/sprites/level3/fire-haunt.png', {
+            frameWidth: 112, frameHeight: 128
         });
 
-        // Ghost - medium (48x16, 3 frames of 16x16)
-        this.load.spritesheet('l3-enemy-medium', 'assets/sprites/level3/ghost.png', {
-            frameWidth: 16, frameHeight: 16
+        // Jumping Demon - medium (606x98, 6 frames of 101x98)
+        this.load.spritesheet('l3-enemy-medium', 'assets/sprites/level3/jumping-demon.png', {
+            frameWidth: 101, frameHeight: 98
         });
 
         // Flying eye - big (384x48, 8 frames of 48x48)
@@ -314,15 +314,15 @@ export default class BootScene extends Phaser.Scene {
 
         this.anims.create({
             key: 'l3-enemy-small-fly',
-            frames: this.anims.generateFrameNumbers('l3-enemy-small', { start: 0, end: 2 }),
+            frames: this.anims.generateFrameNumbers('l3-enemy-small', { start: 0, end: 4 }),
             frameRate: 10,
             repeat: -1
         });
 
         this.anims.create({
             key: 'l3-enemy-medium-fly',
-            frames: this.anims.generateFrameNumbers('l3-enemy-medium', { start: 0, end: 2 }),
-            frameRate: 8,
+            frames: this.anims.generateFrameNumbers('l3-enemy-medium', { start: 0, end: 5 }),
+            frameRate: 10,
             repeat: -1
         });
 
